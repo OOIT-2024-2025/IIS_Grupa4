@@ -2,6 +2,7 @@ package src.introduction;
 
 import java.util.Iterator;
 
+import src.geometry.Line;
 import src.geometry.Point;
 
 public class HelloWorld {
@@ -103,6 +104,39 @@ public class HelloWorld {
 		System.out.println("Distance: "+ result);
 		double result2 = point1.distance(point2.getXCoord(), point2.getYCoord());
 		System.out.println("Distance: "+ result2);
+		
+		// Trece vezbe
+		// 1. Proizvoljno kreirati objekte klase tačka point1, 
+		// point2 i klase Line line1
+		Point point1a = new Point();
+		Point point2a = new Point();
+		
+		// 2. Koordinatama tačaka dodeliti željene vrednosti 
+		// point1a x koord sa 0 na 10
+		point1a.setXCoord(10);
+		point1a.setYCoord(20);
+		point2a.setXCoord(40);
+		point2a.setYCoord(30);
+		
+		System.out.println("XCoord point1: "+ point1a.getXCoord());
+		System.out.println("YCoord point1: "+ point1a.getYCoord());
+		System.out.println("XCoord point2: "+ point2a.getXCoord());
+		System.out.println("YCoord point2: "+ point2a.getYCoord());
+		
+		// 3. Promeniti x koordinatu tačke point1a na vrednost 
+		// y koordinate tačke point2a
+		point1a.setXCoord(point2a.getYCoord());
+		
+		// 4. Pristupiti početnoj tački (tj. njenim koordinatama) objekta line1
+		Line line1 = new Line();
+		// da ne bi bilo NullPointerException setuj pocetnu i krajnju tacku linije line1
+		line1.setStartPoint(point1a);
+		line1.setEndPoint(point2a);
+		
+		System.out.println(line1.getStartPoint().getXCoord());
+		System.out.println(line1.getStartPoint().getYCoord());
+		
+
 	}
 
 }
