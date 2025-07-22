@@ -5,6 +5,19 @@ public class Circle {
 	private int radius;
 	private boolean selected;
 	
+	public Circle() {
+	}
+
+	public Circle(Point center, int radius) {
+		this.center = center;
+		this.radius = radius;
+	}
+
+	public Circle(Point center, int radius, boolean selected) {
+		this(center, radius);
+		this.selected = selected;
+	}
+	
 	public double area() { 
 		return radius*radius*Math.PI;
 	}

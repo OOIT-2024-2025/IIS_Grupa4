@@ -136,6 +136,22 @@ public class HelloWorld {
 		System.out.println(line1.getStartPoint().getXCoord());
 		System.out.println(line1.getStartPoint().getYCoord());
 		
+		/* 9. Postaviti x koordinatu krajnje tačke linije line1 
+		na vrednost dužine linije line1 umanjene za vrednost zbira x i y 
+		koordinate početne tačke linije line1*/
+		line1.getEndPoint().setXCoord((int)(line1.length() - 
+				(line1.getStartPoint().getXCoord() 
+						+ line1.getStartPoint().getYCoord())));
+		
+		// konstruktori
+		Point point4 = new Point(5,4);
+		System.out.println("XCoord point4: "+ point4.getXCoord());
+		System.out.println("YCoord point4: "+ point4.getYCoord());
+		
+		Point point4a = new Point(15,24, true);
+		System.out.println("XCoord point4a: "+ point4a.getXCoord());
+		System.out.println("YCoord point4a: "+ point4a.getYCoord());
+		System.out.println("selected point4a: "+ point4a.isSelected());
 
 	}
 

@@ -6,6 +6,30 @@ public class Point {
 	private int xCoord;
 	private int yCoord;
 	private boolean selected;
+	
+	// konstruktori
+	public Point() {
+		
+	}
+	
+	/* razliciti potpisi pa moze overloading
+	 * Point
+	 * Point int int
+	 * Point boolean int 
+	 */
+	
+	public Point(int xCoord, int yCoord) {
+		this.xCoord = xCoord;
+		this.yCoord = yCoord;
+	}
+	
+	public Point(int xCoord, int yCoord, boolean selected) {
+		// this.xCoord = xCoord;
+		// this.yCoord = yCoord;
+		this(xCoord, yCoord);
+		this.selected = selected;
+	}
+	
 
 	public double distance(Point point2) {
 		double dx = xCoord - point2.xCoord;
