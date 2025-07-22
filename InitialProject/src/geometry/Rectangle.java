@@ -29,6 +29,10 @@ public class Rectangle {
 		return 2*width + 2*height;
 	}
 	
+	public String toString() {
+		return "Upper left point: " + upperLeftPoint + ", width = " + width + ", height = " + height;
+	}
+	
 	//metode pristupa 
 	public Point getUpperLeftPoint() {
 		return upperLeftPoint;

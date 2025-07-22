@@ -25,6 +25,10 @@ public class Line {
 		return d;
 	}
 	
+	public String toString() {
+		return startPoint.toString() + "-->" + endPoint;
+	}
+	
 	// metoda pristupa
 	public Point getStartPoint() {
 		return this.startPoint;

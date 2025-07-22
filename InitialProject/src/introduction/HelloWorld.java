@@ -152,6 +152,11 @@ public class HelloWorld {
 		System.out.println("XCoord point4a: "+ point4a.getXCoord());
 		System.out.println("YCoord point4a: "+ point4a.getYCoord());
 		System.out.println("selected point4a: "+ point4a.isSelected());
+		
+		int x=5;
+		System.out.println(x);
+		System.out.println(point4a);
+		System.out.println(point4a.toString());
 
 	}
 

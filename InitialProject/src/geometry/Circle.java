@@ -25,6 +25,11 @@ public class Circle {
 		return 2*radius*Math.PI;
 	}
 	
+	public String toString() {
+		return "Center: " + center + ", radius = " + radius;
+	}
+
+	
 	//metode pristupa 
 	public Point getCenter() {
 		return center;

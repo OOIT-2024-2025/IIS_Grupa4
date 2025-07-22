@@ -44,6 +44,16 @@ public class Point {
 		double d = Math.sqrt(dx * dx + dy * dy);
 		return d;
 	}
+	
+	// overriding - prilagodjavanje nasledjene metode
+	// toString za Point po default-u koristiti toString metodu iz klase Object
+	// ta metoda ispisuje referencu i posto se nama to ne dopada
+	// mi cemo tu metodu prilagoditi
+	
+	// mora da ima isti potpis metode kao metoda u klasi object
+	public String toString() {
+		return "("+ xCoord + "," + yCoord + "), selected = " + selected;
+	}
 
 	public int getXCoord() {
 		return xCoord;
