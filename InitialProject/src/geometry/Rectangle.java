@@ -33,6 +33,18 @@ public class Rectangle {
 		return "Upper left point: " + upperLeftPoint + ", width = " + width + ", height = " + height;
 	}
 	
+	public boolean equals(Object obj) {
+		if (obj instanceof Rectangle) {
+			Rectangle pomocna = (Rectangle) obj;
+			if (this.upperLeftPoint.equals(pomocna.upperLeftPoint) && this.width == pomocna.width
+					&& this.height == pomocna.height)
+				return true;
+			else
+				return false;
+		} else
+			return false;
+	}
+	
 	//metode pristupa 
 	public Point getUpperLeftPoint() {
 		return upperLeftPoint;

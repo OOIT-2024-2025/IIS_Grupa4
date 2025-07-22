@@ -29,6 +29,16 @@ public class Circle {
 		return "Center: " + center + ", radius = " + radius;
 	}
 
+	public boolean equals(Object obj) {
+		if (obj instanceof Circle) {
+			Circle pomocna = (Circle) obj;
+			if (this.center.equals(pomocna.center) && this.radius == pomocna.radius)
+				return true;
+			else
+				return false;
+		} else
+			return false;
+	}
 	
 	//metode pristupa 
 	public Point getCenter() {

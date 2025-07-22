@@ -157,6 +157,34 @@ public class HelloWorld {
 		System.out.println(x);
 		System.out.println(point4a);
 		System.out.println(point4a.toString());
+		
+		// Poredjenje po vrednosti i referenci
+		System.out.println("Poredjenje po vrednosti i referenci");
+		int c = 5; //int je primitivni tip te nema poredjenje referenci
+		int d = 5; 
+		System.out.println(c == d); 
+		 
+		d = 7; 
+		System.out.println(c == d); 
+
+		// slozeni tipovi
+		String s1a = new String("Hello World");
+		String s2a = new String("Hello World"); // kreira se novi objekat 
+		System.out.println(s1a==s2a);
+		System.out.println(s1a.equals(s2a)); // poredjenje po vrednosti jer je redefinisana u klasi String
+		
+		Point point10 = new Point(5,5);
+		Point point20 = new Point(5,5);
+		System.out.println(point10==point20);
+		// equals kada nije override u child class onda poredi i dalje reference
+		// da bi poredila vrednosti moramo joj reci kako
+		// i to radimo sa override metode equals iz klase Object
+		System.out.println(point10.equals(point20));
+		
+		point10 = point20; // dodela reference kod slozenih tipova
+		System.out.println(point10==point20);
+		
+
 
 	}
 

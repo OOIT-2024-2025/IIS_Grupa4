@@ -29,6 +29,17 @@ public class Line {
 		return startPoint.toString() + "-->" + endPoint;
 	}
 	
+	public boolean equals(Object obj) {
+		if (obj instanceof Line) {
+			Line pomocna = (Line) obj;
+			if (this.startPoint.equals(pomocna.startPoint)
+					&& this.endPoint.equals(pomocna.endPoint)
+					&& this.selected == pomocna.selected)
+				return true;
+		}
+		return false;
+	}
+	
 	// metoda pristupa
 	public Point getStartPoint() {
 		return this.startPoint;
