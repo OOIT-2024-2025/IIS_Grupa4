@@ -2,6 +2,7 @@ package src.introduction;
 
 import java.util.Iterator;
 
+import src.geometry.Donut;
 import src.geometry.Line;
 import src.geometry.Point;
 import src.geometry.Rectangle;
@@ -195,6 +196,15 @@ public class HelloWorld {
 		System.out.println(rectangle);
 		Rectangle rectangle2 = new Rectangle(new Point(5,5), 50, 40);
 		System.out.println(rectangle2);
+		
+		Donut donut1 = new Donut();
+		System.out.println(donut1);
+		Donut donut2 = new Donut(new Point(10,15), 5, 15, false);
+		System.out.println(donut2.toString());
+		
+		donut1.setCenter(new Point(5,6));
+		System.out.println(donut1);
+		System.out.println(donut1.equals(donut2));
 	}
 
 }
