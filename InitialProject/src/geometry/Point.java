@@ -45,6 +45,12 @@ public class Point {
 		return d;
 	}
 	
+	public boolean contains(int x, int y) {
+		if (this.distance(x, y) <= 2)
+			return true;
+		return false;
+	}
+	
 	// overriding - prilagodjavanje nasledjene metode
 	// toString za Point po default-u koristiti toString metodu iz klase Object
 	// ta metoda ispisuje referencu i posto se nama to ne dopada

@@ -40,6 +40,12 @@ public class Line {
 		return false;
 	}
 	
+	public boolean contains(int x, int y) {
+		Point sadrziTacku = new Point(x, y);
+		return this.startPoint.distance(sadrziTacku) + 
+				this.endPoint.distance(sadrziTacku) - length() <= 2;
+	}
+	
 	// metoda pristupa
 	public Point getStartPoint() {
 		return this.startPoint;

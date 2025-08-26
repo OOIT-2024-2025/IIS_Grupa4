@@ -4,6 +4,7 @@ import java.util.Iterator;
 
 import src.geometry.Line;
 import src.geometry.Point;
+import src.geometry.Rectangle;
 
 public class HelloWorld {
 
@@ -185,7 +186,15 @@ public class HelloWorld {
 		System.out.println(point10==point20);
 		
 
-
+		// pete vezbe
+		System.out.println(point10.contains(5, 5));
+		
+		Rectangle rectangle = new Rectangle(point20, 50, 40);
+		System.out.println(rectangle);
+		point20.setXCoord(10);
+		System.out.println(rectangle);
+		Rectangle rectangle2 = new Rectangle(new Point(5,5), 50, 40);
+		System.out.println(rectangle2);
 	}
 
 }

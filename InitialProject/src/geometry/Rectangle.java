@@ -45,6 +45,20 @@ public class Rectangle {
 			return false;
 	}
 	
+	public boolean contains(int x, int y) {
+		return (x >= this.upperLeftPoint.getXCoord() 
+				&& x <= this.upperLeftPoint.getXCoord() + width
+				&& y >= this.upperLeftPoint.getYCoord() 
+				&& y <= this.upperLeftPoint.getYCoord() + height);
+	}
+	
+	public boolean contains(Point clickedPoint) {
+		return (clickedPoint.getXCoord() >= this.upperLeftPoint.getXCoord() 
+				&& clickedPoint.getXCoord() <= this.upperLeftPoint.getXCoord() + width
+				&& clickedPoint.getYCoord() >= this.upperLeftPoint.getYCoord() 
+				&& clickedPoint.getYCoord() <= this.upperLeftPoint.getYCoord() + height);
+	}
+	
 	//metode pristupa 
 	public Point getUpperLeftPoint() {
 		return upperLeftPoint;
