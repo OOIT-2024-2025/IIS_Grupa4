@@ -1,10 +1,11 @@
 package src.geometry;
 
-public class Rectangle {
+import java.awt.Graphics;
+
+public class Rectangle extends Shape{
 	private Point upperLeftPoint;
 	private int width;
 	private int height;
-	private boolean selected;
 	
 	public Rectangle() {
 
@@ -59,6 +60,12 @@ public class Rectangle {
 				&& clickedPoint.getYCoord() <= this.upperLeftPoint.getYCoord() + height);
 	}
 	
+	public void draw(Graphics g) {
+		g.drawRect(upperLeftPoint.getXCoord(),
+				upperLeftPoint.getYCoord(), width, height);
+		
+	}
+	
 	//metode pristupa 
 	public Point getUpperLeftPoint() {
 		return upperLeftPoint;
@@ -78,12 +85,7 @@ public class Rectangle {
 	public void setHeight(int height) {
 		this.height = height;
 	}
-	public boolean isSelected() {
-		return selected;
-	}
-	public void setSelected(boolean selected) {
-		this.selected = selected;
-	}
+
 	
 
 }

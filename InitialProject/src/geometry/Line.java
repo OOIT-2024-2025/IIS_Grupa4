@@ -1,6 +1,8 @@
 package src.geometry;
 
-public class Line {
+import java.awt.Graphics;
+
+public class Line extends Shape{
 	// property / svojstva
 	// enkapsulacija - property private, metode pristupa (get/set) public
 	private Point startPoint;
@@ -46,6 +48,12 @@ public class Line {
 				this.endPoint.distance(sadrziTacku) - length() <= 2;
 	}
 	
+	public void draw(Graphics g) {
+		g.drawLine(startPoint.getXCoord(), startPoint.getYCoord(),
+				endPoint.getXCoord(), endPoint.getYCoord());
+		
+	}
+	
 	// metoda pristupa
 	public Point getStartPoint() {
 		return this.startPoint;
@@ -63,12 +71,7 @@ public class Line {
 		this.endPoint = endPoint;
 	}
 
-	public boolean isSelected() {
-		return selected;
-	}
 
-	public void setSelected(boolean selected) {
-		this.selected = selected;
-	}
+
 
 }

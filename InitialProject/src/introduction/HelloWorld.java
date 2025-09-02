@@ -6,6 +6,7 @@ import src.geometry.Donut;
 import src.geometry.Line;
 import src.geometry.Point;
 import src.geometry.Rectangle;
+import src.geometry.Shape;
 
 public class HelloWorld {
 
@@ -205,6 +206,15 @@ public class HelloWorld {
 		donut1.setCenter(new Point(5,6));
 		System.out.println(donut1);
 		System.out.println(donut1.equals(donut2));
+		
+		// 6. vezbe 
+		System.out.println("6. vezbe");
+		// ne moze da se izvrsi
+		//Shape shape1 = new Shape();
+		// ovo je dozvoljeno
+		Shape shape1 = new Point(5,6, true);
+		Shape shape2 = new Rectangle(new Point(50,60), 40, 30, true);
+		Rectangle rect10 = new Rectangle(new Point(50,60), 40, 30, true);
 	}
 
 }

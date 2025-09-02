@@ -1,11 +1,12 @@
 package src.geometry;
 
-public class Point {
+import java.awt.Graphics;
+
+public class Point extends Shape{
 	// atributi klase
 	// enkapsulacija
 	private int xCoord;
 	private int yCoord;
-	private boolean selected;
 	
 	// konstruktori
 	public Point() {
@@ -71,6 +72,11 @@ public class Point {
 		}
 		return false;
 	}
+	
+	public void draw(Graphics g) {
+		g.drawLine(xCoord-2, yCoord, xCoord+2, yCoord);
+		g.drawLine(xCoord, yCoord-2, xCoord, yCoord+2);
+	}
 
 	public int getXCoord() {
 		return xCoord;
@@ -86,14 +92,6 @@ public class Point {
 
 	public void setYCoord(int yCoord) {
 		this.yCoord = yCoord;
-	}
-
-	public boolean isSelected() {
-		return selected;
-	}
-
-	public void setSelected(boolean selected) {
-		this.selected = selected;
 	}
 
 }

@@ -1,5 +1,7 @@
 package src.geometry;
 
+import java.awt.Graphics;
+
 public class Donut extends Circle {
 	// center, radius, selected nam ne trebaju jer ih imamo iz circle
 	// private Point center;
@@ -61,6 +63,13 @@ public class Donut extends Circle {
 	public double area() { 
 		double area = super.area() - innerRadius*innerRadius*Math.PI;
 		return area;
+	}
+	
+	public void draw(Graphics g) {
+		super.draw(g);
+		g.drawOval(getCenter().getXCoord()-innerRadius,
+				getCenter().getYCoord()-innerRadius, 
+				2*innerRadius, 2*innerRadius);
 	}
 	
 	public void setInnerRadius(int innerRadius) {
