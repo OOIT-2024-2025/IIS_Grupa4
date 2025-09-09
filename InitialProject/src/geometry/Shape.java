@@ -2,7 +2,7 @@ package src.geometry;
 
 import java.awt.Graphics;
 
-public abstract class Shape {
+public abstract class Shape implements Moveable, Comparable{
 	protected boolean selected;
 
 	// ima konstruktore
@@ -18,6 +18,10 @@ public abstract class Shape {
 	public abstract boolean contains(int x, int y);
 	
 	public abstract void draw(Graphics g);
+	
+	public abstract boolean equals(Object obj);
+	
+	public abstract String toString();
 	
 	// metode pristupa
 	public boolean isSelected() {

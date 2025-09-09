@@ -77,6 +77,30 @@ public class Point extends Shape{
 		g.drawLine(xCoord-2, yCoord, xCoord+2, yCoord);
 		g.drawLine(xCoord, yCoord-2, xCoord, yCoord+2);
 	}
+	
+	@Override
+	public void moveTo(int x, int y) {
+		this.xCoord = x;
+		this.yCoord = y;
+		
+	}
+
+	@Override
+	public void moveBy(int x, int y) {
+		this.xCoord += x;
+		this.yCoord += y;
+		
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		if(o instanceof Point) {
+			Point shapeToCompare = (Point)o;
+			return (int)this.distance(new Point(0,0))
+					- (int)shapeToCompare.distance(new Point(0,0));
+		}
+		return 0;
+	}
 
 	public int getXCoord() {
 		return xCoord;
@@ -93,5 +117,7 @@ public class Point extends Shape{
 	public void setYCoord(int yCoord) {
 		this.yCoord = yCoord;
 	}
+
+
 
 }

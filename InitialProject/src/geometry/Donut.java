@@ -72,6 +72,14 @@ public class Donut extends Circle {
 				2*innerRadius, 2*innerRadius);
 	}
 	
+	public int compareTo(Object obj) {
+		if(obj instanceof Donut) {
+			Donut shapeToCompare = (Donut)obj;
+			return (int)(this.area() - shapeToCompare.area());
+		}
+		return 0;
+	}
+	
 	public void setInnerRadius(int innerRadius) {
 		this.innerRadius = innerRadius;
 	}

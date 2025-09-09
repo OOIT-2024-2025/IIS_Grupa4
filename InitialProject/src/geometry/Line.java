@@ -54,6 +54,29 @@ public class Line extends Shape{
 		
 	}
 	
+
+	@Override
+	public void moveTo(int x, int y) {
+		// nije logicna
+		
+	}
+
+	@Override
+	public void moveBy(int x, int y) {
+		startPoint.moveBy(x, y);
+		endPoint.moveBy(x, y);
+		
+	}
+	
+	@Override
+	public int compareTo(Object obj) {
+		if(obj instanceof Line) {
+			Line shapeToCompare = (Line)obj;
+			return (int)(this.length() - shapeToCompare.length());
+		}
+		return 0;
+	}
+	
 	// metoda pristupa
 	public Point getStartPoint() {
 		return this.startPoint;
