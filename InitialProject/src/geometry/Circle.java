@@ -82,7 +82,11 @@ public class Circle extends Shape{
 	public int getRadius() {
 		return radius;
 	}
-	public void setRadius(int radius) {
+
+	public void setRadius(int radius) throws Exception{
+		if(radius<=0) {
+			throw new Exception("Radius ne moze biti manji od 0");
+		}
 		this.radius = radius;
 	}
 

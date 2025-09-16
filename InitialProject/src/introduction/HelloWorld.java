@@ -2,6 +2,7 @@ package src.introduction;
 
 import java.util.Iterator;
 
+import src.geometry.Circle;
 import src.geometry.Donut;
 import src.geometry.Line;
 import src.geometry.Point;
@@ -215,6 +216,33 @@ public class HelloWorld {
 		Shape shape1 = new Point(5,6, true);
 		Shape shape2 = new Rectangle(new Point(50,60), 40, 30, true);
 		Rectangle rect10 = new Rectangle(new Point(50,60), 40, 30, true);
+		
+		
+		//Drugi deo osmih vežbi
+		Integer.parseInt("pet");
+		System.out.println("1 - Da li cu se izvrsiti?");
+		
+		try {
+			Integer.parseInt("pet");
+			System.out.println("Bice greska");
+		} catch (NumberFormatException nfe) {
+			System.out.println("Greska NFE");
+			nfe.printStackTrace();
+		} finally {
+			System.out.println("Finally - Da li cu se izvrsiti?");
+		}
+		System.out.println("2 - Da li cu se izvrsiti?");
+		
+		
+		Point p81=new Point(50,60);
+		Shape c81=new Circle(p81, 50);
+		try {
+			((Circle)c81).setRadius(-50);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		} finally {
+			System.out.println("Finally - Da li cu se izvrsiti?");
+		}
 	}
 
 }
