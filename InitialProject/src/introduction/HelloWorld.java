@@ -219,8 +219,8 @@ public class HelloWorld {
 		
 		
 		//Drugi deo osmih vežbi
-		Integer.parseInt("pet");
-		System.out.println("1 - Da li cu se izvrsiti?");
+		//Integer.parseInt("pet");
+		//System.out.println("1 - Da li cu se izvrsiti?");
 		
 		try {
 			Integer.parseInt("pet");

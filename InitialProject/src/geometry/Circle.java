@@ -1,5 +1,6 @@
 package src.geometry;
 
+import java.awt.Color;
 import java.awt.Graphics;
 
 public class Circle extends Shape{
@@ -51,7 +52,15 @@ public class Circle extends Shape{
 		// obratiti paznju na potpis metode drawOval!
 		g.drawOval(center.getXCoord()-radius,
 				center.getYCoord() - radius, 2* radius, 2*radius);
-		
+		if (isSelected()) {
+			g.setColor(Color.BLUE);
+			g.drawRect(center.getXCoord() - 2, center.getYCoord() - 2, 4, 4);
+			g.drawRect(center.getXCoord() - radius - 2, center.getYCoord() - 2, 4, 4);
+			g.drawRect(center.getXCoord() + radius - 2, center.getYCoord() - 2, 4, 4);
+			g.drawRect(center.getXCoord() - 2, center.getYCoord() - radius - 2, 4, 4);
+			g.drawRect(center.getXCoord() - 2, center.getYCoord() + radius - 2, 4, 4);
+			g.setColor(Color.black);
+		}
 	}
 	
 	@Override
