@@ -22,23 +22,6 @@ public class IntroductionClass {
 		
 		frame.setVisible(true);
 		
-		// Deo vežbi 7
-		Point p3 = new Point(50, 50);
-		Rectangle r10 = new Rectangle(p3, 10, 10);
-		Rectangle r20 = new Rectangle(p3, 20, 20);
-		Shape r30 = new Rectangle(p3, 30, 30);
-		Shape[] shapes = { r30, r10, r20 };
-		System.out.println("\nNesortiran niz: ");
-		for (int i = 0; i < shapes.length; i++) {
-			System.out.println(shapes[i]);
-		}
-		// u pozadini sortira po compareTo
-		Arrays.sort(shapes);
-		System.out.println("Sortiran niz: ");
-		for (int i = 0; i < shapes.length; i++) {
-			System.out.println(shapes[i]);
-		}
-		
 		
 
 	}
